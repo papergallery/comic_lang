@@ -17,13 +17,11 @@ import com.example.comic_lang.TabLayout.Tab;
 
 public class MainActivity extends AppCompatActivity {
     private static int[] icons = {
-            R.drawable.a1, R.drawable.a2, R.drawable.a3, R.drawable.a4, R.drawable.a5,
-            R.drawable.a6, R.drawable.a7
+            R.drawable.a1, R.drawable.a2, R.drawable.a3, R.drawable.a4,
     };
 
     private static String[] title = {
-            "BUSINESS", "HEALTH", "TRAVEL", "FOOD", "SHOPPING",
-            "FINANCIAL", "FASHION"
+            "SHOP", "STORY MODE", "VOCABULARY", "PROFILE"
     };
 
     Toolbar mToolbar;
