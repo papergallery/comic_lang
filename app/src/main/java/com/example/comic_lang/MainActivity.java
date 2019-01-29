@@ -18,16 +18,16 @@ public class MainActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
-                    mTextMessage.setText(R.string.app_name);
+//                    mTextMessage.setText(R.string.app_name);
                     return true;
                 case R.id.navigation_dashboard:
-                    mTextMessage.setText(R.string.title_storymode);
+//                    mTextMessage.setText(R.string.title_storymode);
                     return true;
                 case R.id.navigation_notifications:
-                    mTextMessage.setText(R.string.title_vocabulary);
+//                    mTextMessage.setText(R.string.title_vocabulary);
                     return true;
                 case R.id.navigation_profile:
-                    mTextMessage.setText(R.string.title_profile);
+//                    mTextMessage.setText(R.string.title_profile);
                     return true;
             }
             return false;
