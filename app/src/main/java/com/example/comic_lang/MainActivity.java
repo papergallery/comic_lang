@@ -18,16 +18,18 @@ public class MainActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
+                    setContentView(R.layout.shop);
 //                    mTextMessage.setText(R.string.app_name);
                     return true;
                 case R.id.navigation_dashboard:
+                    setContentView(R.layout.storymode);
 //                    mTextMessage.setText(R.string.title_storymode);
                     return true;
                 case R.id.navigation_notifications:
-//                    mTextMessage.setText(R.string.title_vocabulary);
+                    mTextMessage.setText(R.string.title_vocabulary);
                     return true;
                 case R.id.navigation_profile:
-//                    mTextMessage.setText(R.string.title_profile);
+                    mTextMessage.setText(R.string.title_profile);
                     return true;
             }
             return false;
@@ -37,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.shop);
 
         mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
