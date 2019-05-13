@@ -79,16 +79,20 @@ public class MainActivity extends AppCompatActivity {
             TextView text = new TextView(this);
             text.setId(i);
             text.setPadding(2, 2, 2, 2);
-            text.setText("qqqqqqqqqqq");
+            text.setText("qqqqqqqqqqq\n");
             TextView price = new TextView(this);
             price.setId(i);
-            price.setText("19.99");
+            price.setText("19.99\n");
             layout.addView(text);
             layout.addView(imageView);
             layout.addView(price);
-            layout.with;
         }
 
     }
 
+    @androidx.annotation.Nullable
+    @Override
+    public String getComicsAllData() {
+
+    }
 }
