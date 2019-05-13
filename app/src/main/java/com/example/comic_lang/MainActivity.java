@@ -74,13 +74,21 @@ public class MainActivity extends AppCompatActivity {
             imageView.setId(i);
             imageView.setPadding(2, 2, 2, 2);
             imageView.setImageBitmap(BitmapFactory.decodeResource(
-                    getResources(), R.drawable.ic_launcher));
+                    getResources(), R.drawable.navigation_profile));
             imageView.setScaleType(ImageView.ScaleType.FIT_XY);
+            TextView text = new TextView(this);
+            text.setId(i);
+            text.setPadding(2, 2, 2, 2);
+            text.setText("qqqqqqqqqqq");
+            TextView price = new TextView(this);
+            price.setId(i);
+            price.setText("19.99");
+            layout.addView(text);
             layout.addView(imageView);
+            layout.addView(price);
+            layout.with;
         }
 
-
     }
-
 
 }
