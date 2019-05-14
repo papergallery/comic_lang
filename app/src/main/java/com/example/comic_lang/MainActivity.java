@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
 import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -67,9 +68,18 @@ public class MainActivity extends AppCompatActivity {
         mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        listOfComics();
+    }
 
+    public void listOfComics() {
         LinearLayout layout = (LinearLayout) findViewById(R.id.linear);
+//        LinearLayout layout = new LinearLayout(MainActivity.this);
+//        layout.setId(100);
         for (int i = 0; i < 10; i++) {
+            LinearLayout block = new LinearLayout(MainActivity.this);
+            block.setDividerPadding(2);
+            block.setId(i);
+            block.setOrientation(LinearLayout.VERTICAL);
             ImageView imageView = new ImageView(this);
             imageView.setId(i);
             imageView.setPadding(2, 2, 2, 2);
@@ -83,16 +93,16 @@ public class MainActivity extends AppCompatActivity {
             TextView price = new TextView(this);
             price.setId(i);
             price.setText("19.99\n");
-            layout.addView(text);
-            layout.addView(imageView);
-            layout.addView(price);
+            block.addView(text);
+            block.addView(imageView);
+            block.addView(price);
+            layout.addView(block);
         }
-
     }
 
-    @androidx.annotation.Nullable
-    @Override
-    public String getComicsAllData() {
-
-    }
+//    @androidx.annotation.Nullable
+//    @Override
+//    public String getComicsAllData() {
+//
+//    }
 }
